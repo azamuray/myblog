@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	{% if title %}
-		<title>{{ title }}</title>
-	{% else %}
-		<title>Блог</title>
-	{% endif %}
-</head>
-<body>
+{% extends 'blog/base.html' %}
+{% block content %}
 	<h1>На этой странице я расскажу о себе</h1>
-</body>
-</html>
+{% endblock %}
