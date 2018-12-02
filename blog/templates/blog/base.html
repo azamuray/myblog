@@ -29,8 +29,13 @@
 	        </div>
 	        <!-- Navbar Right Side -->
 	        <div class="navbar-nav">
-	          <a class="nav-item nav-link" href="#">Логин</a>
-	          <a class="nav-item nav-link" href="#">Регистрация</a>
+	          {% if user.is_authenticated %}
+		          <a class="nav-item nav-link" href="{% url 'profile' %}">Профиль</a>
+		          <a class="nav-item nav-link" href="{% url 'logout' %}">Выйти</a>
+						{% else %}
+		          <a class="nav-item nav-link" href="{% url 'login' %}">Войти</a>
+		          <a class="nav-item nav-link" href="{% url 'register' %}">Регистрация</a>
+	          {% endif %}
 	        </div>
 	      </div>
 	    </div>
