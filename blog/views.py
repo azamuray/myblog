@@ -14,6 +14,7 @@ class PostListView(ListView):
 	template_name = 'blog/home.html'
 	context_object_name = 'posts'
 	ordefing = ['-date_posted']
+	paginate_by = 5
 
 
 class PostDetailView(DetailView):
